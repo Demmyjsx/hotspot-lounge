@@ -36,7 +36,7 @@ export default function NavBar() {
                 <p>Velvet Pour</p>
             </a>
 
-            <ul>
+            <ul> 
                 {navLinks.map((link)=>(
                   <li key={link.id}>
                     <a href={`#${link.id}`}>{link.title}</a>  
