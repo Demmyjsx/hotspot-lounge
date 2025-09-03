@@ -9,30 +9,24 @@ gsap.registerPlugin(ScrollTrigger)
 export default function Cocktails() {
   const containerRef = useRef(null)
 
-  useGSAP(
-    () => {
-      const parallaxTimeLine = gsap.timeline({
-        scrollTrigger: {
-          trigger: '#cocktails', 
-          start: 'top 30%', 
-          end: 'bottom 80%',
-          scrub: true, 
-        },
-      })
-
-      parallaxTimeLine.from('#c-left-leaf', {
-        x: -100,
-        y: 150,
-      })
-
-      .from('#c-right-leaf', {
-        x: 100,
-        y: 100,
-      })
-    },
-    { scope: containerRef } 
-  )
-
+  useGSAP(() => {
+	const parallaxTimeline = gsap.timeline({
+	 scrollTrigger: {
+		trigger: '#cocktails',
+		start: 'top 30%',
+		end: 'bottom 80%',
+		scrub: true,
+	 }
+	})
+	
+	parallaxTimeline
+	 .from('#c-left-leaf', {
+		x: -100, y: 100
+	})
+	 .from('#c-right-leaf', {
+		x: 100, y: 100
+	})
+ })
   return (
     <section id='cocktails' className='noisy' ref={containerRef}>
       <img src='/images/cocktail-left-leaf.png' alt='l-leaf' id='c-left-leaf' />
