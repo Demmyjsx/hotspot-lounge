@@ -6,6 +6,7 @@ import Cocktails from "./components/Cocktails"
 import About from "./components/About"
 import Art from "./components/Art"
 import Menu from "./components/Menu"
+import Contant from "./components/Contant"
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
        <About />
        <Art />
        <Menu />
+       <Contant />
     </main>
   )
 }
